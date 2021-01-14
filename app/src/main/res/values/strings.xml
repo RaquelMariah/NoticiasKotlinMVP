@@ -10,5 +10,4 @@
     <string name="article_saved_successful">Artigo salvo com sucesso!</string>
     <string name="article_delete_successful">Artigo deletado com sucesso</string>
     <string name="undo">desfazer</string>
-    <string name="apiKey">8ddb90fd48944e2dbc8d3a19c65af2cb</string>
 </resources>
