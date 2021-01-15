@@ -1,7 +1,8 @@
-package com.ramaria.aplicativonoticiaskotlin
+package com.ramaria.aplicativonoticiaskotlin.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ramaria.aplicativonoticiaskotlin.R
 
 class SearchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

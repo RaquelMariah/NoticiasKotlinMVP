@@ -11,9 +11,10 @@ import com.ramaria.aplicativonoticiaskotlin.R
 import com.ramaria.aplicativonoticiaskotlin.model.Article
 import kotlinx.android.synthetic.main.item_news.view.*
 
-class MainAdapter : RecyclerView.Adapter<MainAdapter.ArticleViewHolder>{
+class MainAdapter : RecyclerView.Adapter<MainAdapter.ArticleViewHolder>() {
 
     inner class ArticleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
     private val differCallback = object: DiffUtil.ItemCallback<Article>(){
         override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
            return oldItem.url == newItem.url
@@ -27,12 +28,12 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ArticleViewHolder>{
 
     val differ = AsyncListDiffer(this, differCallback)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder =
      ArticleViewHolder(
          LayoutInflater.from(parent.context)
              .inflate(R.layout.item_news, parent, false)
 
-    }
+     )
 
     override fun getItemCount(): Int = differ.currentList.size
 
@@ -42,8 +43,8 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ArticleViewHolder>{
             Glide.with(this)
                 .load(article.url)
                 .into(ivArticleImage)
-            tvTitle.text = article.source?.name
-            tvSource.text = article.author ?: article.source?.name
+            tvTitle.text = article.author ?: article.source?.name
+            tvSource.text = article.source?.name ?: article.author
             tvDescription.text = article.description
             tvPublishedAt.text = article.publishedAt
 
