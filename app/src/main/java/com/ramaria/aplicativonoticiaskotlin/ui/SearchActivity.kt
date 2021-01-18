@@ -1,5 +1,6 @@
 package com.ramaria.aplicativonoticiaskotlin.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -32,6 +33,7 @@ class SearchActivity : AbstractActivity(), ViewHome.View {
         presenter = SearchPresenter(this, dataSource)
         configRecycler()
         search()
+        clickAdapter()
 
     }
 
@@ -58,6 +60,14 @@ class SearchActivity : AbstractActivity(), ViewHome.View {
             addItemDecoration(DividerItemDecoration(
                     this@SearchActivity, DividerItemDecoration.VERTICAL
             ))
+        }
+    }
+
+    private fun clickAdapter(){
+        mainAdapter.setOnClickListener { article ->
+            val intent = Intent(this, ArticleActivity::class.java)
+            intent.putExtra("article", article)
+            startActivity(intent)
         }
     }
 
