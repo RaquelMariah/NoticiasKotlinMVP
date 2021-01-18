@@ -1,8 +1,6 @@
 package com.ramaria.aplicativonoticiaskotlin.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -12,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ramaria.aplicativonoticiaskotlin.R
 import com.ramaria.aplicativonoticiaskotlin.adapter.MainAdapter
 import com.ramaria.aplicativonoticiaskotlin.model.Article
-import com.ramaria.aplicativonoticiaskotlin.model.data.NewsDataSource
+import com.ramaria.aplicativonoticiaskotlin.model.database.NewsDataSource
 import com.ramaria.aplicativonoticiaskotlin.presenter.ViewHome
 import com.ramaria.aplicativonoticiaskotlin.presenter.news.NewsPresenter
 import kotlinx.android.synthetic.main.activity_main.*

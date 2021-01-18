@@ -1,7 +1,5 @@
-package com.ramaria.aplicativonoticiaskotlin.model.data
+package com.ramaria.aplicativonoticiaskotlin.model.database
 
-import android.media.browse.MediaBrowser
-import com.ramaria.aplicativonoticiaskotlin.model.ResponseNews
 import com.ramaria.aplicativonoticiaskotlin.presenter.search.SearchHome
 import com.ramaria.aplicativonoticiaskotlin.services.NewsHome
 import com.ramaria.aplicativonoticiaskotlin.services.RetrofitInstance
