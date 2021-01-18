@@ -4,9 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ramaria.aplicativonoticiaskotlin.R
 
-class FavoriteActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_favorite)
+class FavoriteActivity : AbstractActivity() {
+    override fun getLayout(): Int = R.layout.activity_favorite
+
+    override fun onInject() {
+
     }
 }

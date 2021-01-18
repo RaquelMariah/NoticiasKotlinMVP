@@ -9,19 +9,20 @@ class NewsPresenter (val view: ViewHome.View,
 private val dataSource: NewsDataSource
 ) : NewsHome.Presenter  {
     override fun requestAll() {
-        TODO("Not yet implemented")
+    this.view.showPorgressBar()
+        this.dataSource.getBreakingNews(this)
     }
 
     override fun onSuccess(newsResponse: ResponseNews) {
-        TODO("Not yet implemented")
+    this.view.showArticles(newsResponse.articles)
     }
 
     override fun onError(message: String) {
-        TODO("Not yet implemented")
+    this.view.showFailure(message)
     }
 
     override fun onComplete() {
-        TODO("Not yet implemented")
+    this.view.hideProgressBar()
     }
 
 

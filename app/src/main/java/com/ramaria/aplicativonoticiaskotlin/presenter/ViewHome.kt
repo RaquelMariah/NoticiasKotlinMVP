@@ -6,7 +6,7 @@ interface ViewHome {
 
     interface View{
         fun showPorgressBar()
-        fun showFailure()
+        fun showFailure(message: String)
         fun hideProgressBar()
         fun showArticles(articles: List<Article>)
     }

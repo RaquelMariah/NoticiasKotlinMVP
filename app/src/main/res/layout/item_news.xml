@@ -14,7 +14,6 @@
         android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        tools:src="@tools:sample/backgrounds/scenic"
         android:scaleType="centerCrop"
         />
 
@@ -25,10 +24,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:paddingBottom="2dp"
         android:fontFamily="@font/open_sans"
         android:text="@string/app_name"
         android:textAllCaps="true"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/ivArticleImage"
         app:layout_constraintTop_toTopOf="@id/ivArticleImage" />
@@ -39,8 +39,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="@string/description"
-        android:maxLines="7"
-        android:textSize="14sp"
+        android:maxLines="8"
+        android:textSize="12sp"
         android:fontFamily="@font/open_sans"
         app:layout_constraintEnd_toEndOf="@+id/tvTitle"
         app:layout_constraintStart_toStartOf="@id/tvTitle"
@@ -52,24 +52,26 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
-        android:textSize="13sp"
+        android:textSize="12sp"
+        android:gravity="start"
         android:text="@string/source"
         app:layout_constraintStart_toStartOf="@+id/ivArticleImage"
         app:layout_constraintTop_toBottomOf="@+id/ivArticleImage"/>
 
     <TextView
         android:id="@+id/tvPublishedAt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/open_sans"
-        android:gravity="end"
+        android:textSize="11sp"
+        android:gravity="start"
         android:text="@string/published_at"
-        android:textAlignment="textEnd"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tvSource"
-        app:layout_constraintTop_toBottomOf="@+id/tvSource"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvSource" />
 
 
 
