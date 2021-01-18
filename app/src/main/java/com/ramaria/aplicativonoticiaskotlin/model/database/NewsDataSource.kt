@@ -1,13 +1,17 @@
 package com.ramaria.aplicativonoticiaskotlin.model.database
 
+import android.content.Context
+import com.ramaria.aplicativonoticiaskotlin.model.Article
+import com.ramaria.aplicativonoticiaskotlin.presenter.favorites.FavoriteHome
 import com.ramaria.aplicativonoticiaskotlin.presenter.search.SearchHome
 import com.ramaria.aplicativonoticiaskotlin.services.NewsHome
 import com.ramaria.aplicativonoticiaskotlin.services.RetrofitInstance
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
-class NewsDataSource {
+class NewsDataSource (context: Context){
+
+    private var db: ArticleDataBase = ArticleDataBase(context)
+    private var newsRepository: NewsRepository = NewsRepository(db)
 
     fun getBreakingNews(callback: NewsHome.Presenter){
 
@@ -41,4 +45,29 @@ class NewsDataSource {
         }
     }
 
+    fun saveArticle(article: Article){
+      GlobalScope.launch (Dispatchers.Main) {
+          newsRepository.updateInsert(article)
+      }
+    }
+
+    fun getAllArticle(callback: FavoriteHome){
+        var allArticles: List<Article>
+        CoroutineScope(Dispatchers.IO).launch {
+            allArticles = newsRepository.getAll()
+            withContext(Dispatchers.Main){
+                callback.showArticles(allArticles)
+            }
+        }
+    }
+
+    fun deleteArticle(article: Article?){
+        GlobalScope.launch(Dispatchers.Main){
+            article?.let{
+                articleSafe ->
+                newsRepository.delete(articleSafe)
+            }
+        }
+
+    }
 }
