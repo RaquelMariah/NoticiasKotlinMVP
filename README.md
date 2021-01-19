@@ -14,6 +14,9 @@ Para o desenvolvimento desse aplicativo, fui utilizado:
 
 Em MVP a camada ***Presenter*** assume a função de mediadora. A ***View*** é responsável por manipular os eventos UI. Finalmente, a ***Model*** se torna estritamente um modelo de domínio.
 
+![mvp](https://user-images.githubusercontent.com/45218570/105050872-fb982a80-5a4c-11eb-8afd-66e2e723686e.png)
+
+
 
 ## Configurações do Projeto
 
