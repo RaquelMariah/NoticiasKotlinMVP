@@ -24,6 +24,28 @@ Para executar o projeto em seu dispositivo, é necessário realizar o cadastro n
 Em seguida, substitua o conteúdo na classe ***Constants***.
 
 
+## Telas
+
+
+***Tela Inicial***           
+:-------------------------:
+![WhatsApp Video 2021-01-19 at 11 56 00](https://user-images.githubusercontent.com/45218570/105073113-62294280-5a65-11eb-9523-5406da069586.gif)
+
+
+
+  ***WebView Noticias***          
+  :-------------------------:
+  ![WhatsApp Video 2021-01-19 at 14 51 50](https://user-images.githubusercontent.com/45218570/105074266-e4663680-5a66-11eb-931b-945f12dca925.gif)
+  
+  
+
+
+  ***Favoritos***        
+  :-------------------------:
+  ![favorites](https://user-images.githubusercontent.com/45218570/105074715-7c642000-5a67-11eb-9324-d7c3cfc9ce58.gif)
+  
+  
+
 ## TO DO
 
 Esse projeto está em construção. Será necessário adicionar:
