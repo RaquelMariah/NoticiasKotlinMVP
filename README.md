@@ -2,7 +2,7 @@
 
 Aplicativo Android que recebe dados da ***News API*** e exibe as notícias em lista.
 
-Para o desenvolvimento desse aplicativo, fui utilizado:
+Para o desenvolvimento desse aplicativo, foi utilizado:
 + [News API](https://newsapi.org)
 + [Kotlin](https://kotlinlang.org)
 + [Coroutines](https://developer.android.com/kotlin/coroutines?gclid=CjwKCAiAo5qABhBdEiwAOtGmbvyr0ukd-jlKwfu5vfgBcU1I0YcPDpfNwO8D2GWWAvE2FWGMrgigoRoCLAsQAvD_BwE&gclsrc=aw.ds)
